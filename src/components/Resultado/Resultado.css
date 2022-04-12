@@ -1,0 +1,9 @@
+.results {
+   margin-top: 15px;
+   border-top: 1px solid var(--gray-300)
+}
+
+p {
+   font-size: 1.1rem;
+   margin-top: 10px;
+}
