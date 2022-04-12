@@ -1,11 +1,11 @@
-export function Criancas(props) {
+export function Adultos(props) {
   return (
-    <input 
+   <input 
       type="number" 
-      name="criancas" 
-      placeholder='Crianças'
+      name="adultos" 
+      placeholder='Adultos'
       value={props.value}
       onChange={event => props.name(event.target.value)}
-    />
+   />
   )
 }

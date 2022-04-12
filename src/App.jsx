@@ -1,17 +1,32 @@
+import { useState } from 'react';
 import { Criancas } from './components/Criancas/Criancas';
 import Duracao from './components/Duracao/Duracao';
-import { Pessoas } from './components/Pessoas/Pessoas';
+import { Adultos } from './components/Adultos/Adultos';
 import './global.css'
 
-function App() {
+export default function App() {
+  const [adultos, setAdultos] = useState('')
+  const [criancas, setCriancas] = useState('')
+  const [duracao, setDuracao] = useState('')
+
+  function calculate() {
+    console.log(adultos, criancas, duracao)
+  }
+
+  function clearAll() {
+    setAdultos('')
+    setCriancas('')
+    setDuracao('')
+  }
+
   return (
     <div className='container'>
       <h1>Churrascômetro</h1>
-      <Pessoas />
-      <Criancas />
-      <Duracao />
+      <Adultos value={adultos} name={setAdultos} />
+      <Criancas value={criancas} name={setCriancas} />
+      <Duracao value={duracao} name={setDuracao} />
+      <button onClick={calculate}>Calcular</button>
+      <button onClick={clearAll}>Limpar</button>
     </div>    
   );
 }
-
-export default App;
