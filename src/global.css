@@ -50,7 +50,7 @@
 .container {
    width: 350px;
    margin: auto;
-   margin-top: 10px;
+   margin-top: 50px;
    padding: 10px;
    background-color: var(--gray-700);
    border-radius: 5px;
